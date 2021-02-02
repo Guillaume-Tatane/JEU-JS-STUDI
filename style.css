@@ -1,194 +1,215 @@
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(238, 140, 122);
-  z-index: -1;
-  font-size: 20px;
-  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 140, 122);
+    z-index: -1;
+    font-size: 20px;
 }
+
 
 /* Plateau de jeu */
-.plateGame{
-  height: 700px;
-  width: 1000px;
-  display: flex;
+
+.plateGame {
+    height: 80vh;
+    width: 70vw;
+    display: flex;
 }
+
 
 /* Bacground des players */
-.bgPlayer1{
-  height: 100%;
-  width: 50%;
-  background-color: rgb(216, 213, 213);
-  z-index: -1;
-}
-.bgPlayer2{
-  height: 100%;
-  width: 50%;
-  background-color:white;
-  z-index: -1;
+
+.bgPlayer1 {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(216, 213, 213);
+    z-index: -1;
 }
 
+.bgPlayer2 {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    z-index: -1;
+}
+
+
 /* Css pour le bouton New Game*/
-.game{
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.header {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.btnGame{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+
+.btnGame {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
-.btn{
-  margin-right: 10px;
-  font-size: 2em;
-  color: red;
-  
+
+.btn {
+    margin-right: 10px;
+    font-size: 2em;
+    color: red;
 }
-.btnGame > h3{
-  font-size: 1.25em;
-  font-weight: 100;
+
+.btnGame>h3 {
+    font-size: 1.25em;
+    font-weight: 100;
 }
 
 
 /* Partie Player et afficahege du score */
-.Player{
-  height: 50%;
-  justify-content: center;  /*allignement du dé*/
-  align-items: center;
+
+.Player {
+    height: 50%;
+    justify-content: center;
+    /*allignement du dé*/
+    align-items: center;
 }
+
 
 /* css Player 1 */
 
-.namePlayer1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    
+.Player1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.namePlayer1 > h2{
-  font-size: 2em;
-  opacity: 1;
-  font-weight: 100;
+
+.Player1>h2 {
+    font-size: 2em;
+    opacity: 1;
+    font-weight: 100;
 }
-.puce1{
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  display: flex;
-  margin-left: 20px;
-  background-color: red;
-  opacity: 1;
+
+.puce1 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 20px;
+    background-color: red;
+    opacity: 1;
 }
-.scorePlayer1{
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  font-size: 4em;
-  color: red;
-  font-weight: 100;
-  opacity: 1;
+
+.scorePlayer1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 4em;
+    color: red;
+    font-weight: 100;
+    opacity: 1;
 }
+
 
 /* css Player 2 */
 
-.namePlayer2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    
+.Player2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.namePlayer2 > h2{
-  font-size: 2em;
-  opacity: 1;
-  font-weight: 100;
+
+.Player2>h2 {
+    font-size: 2em;
+    opacity: 1;
+    font-weight: 100;
 }
-.puce2{
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  display: flex;
-  margin-left: 20px;
-  background-color: red;
-  opacity: 1;
+
+.puce2 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 20px;
+    background-color: red;
+    opacity: 1;
 }
-.scorePlayer2{
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  font-size: 4em;
-  color: red;
-  font-weight: 100;
-  opacity: 1;
+
+.scorePlayer2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 4em;
+    color: red;
+    font-weight: 100;
+    opacity: 1;
 }
+
 
 /* css du Dé de Jeu */
 
-.D{
- position: absolute;
- height: 120px;
- width: 120px;
- background-color: white;
- box-shadow: 2px 1px 2px 1px rgba(3,0,0,0.65);
- 
-}
-.dLine{
-   height: 40px;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.dGame {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    box-shadow: 2px 1px 2px 1px rgba(3, 0, 0, 0.65);
 }
 
-.puceD{
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: red;
-  
+.dLine {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.colD{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.puceD {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.dCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#null{
+    opacity: 0;
 }
 
 /* Partie controle player */
 
-
-.controlGame{
-  height: 30%;
-  width: 100%;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.controlBtn{
-  height: 25%;
-  
-}
-.current{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.controlGame {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.currentScore{
-  height: 50%;
-  width: 25%;
-  background-color: red;
-  text-align: center;
-  
-}
-.currentScore > h4{
-  font-size: 0.8em;
-}
-.score1, .score2{
-  color: white;
-   font-size: 2em;
+.controlBtn {
+    height: 25%;
+    cursor: pointer;
 }
 
+.btnControlGame {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentScore {
+    height: 50%;
+    width: 25%;
+    background-color: red;
+    text-align: center;
+}
+
+.currentScore>h4 {
+    font-size: 0.8em;
+}
+
+.score1,
+.score2 {
+    color: white;
+    font-size: 2em;
+}
