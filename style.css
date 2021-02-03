@@ -84,6 +84,7 @@ body {
     font-size: 2em;
     opacity: 1;
     font-weight: 100;
+    text-transform: uppercase;
 }
 
 .puce1 {
@@ -94,9 +95,10 @@ body {
     margin-left: 20px;
     background-color: red;
     opacity: 1;
+    
 }
 
-.scorePlayer1 {
+#scorePlayer1 {
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -119,6 +121,7 @@ body {
     font-size: 2em;
     opacity: 1;
     font-weight: 100;
+    text-transform: uppercase;
 }
 
 .puce2 {
@@ -128,10 +131,11 @@ body {
     display: flex;
     margin-left: 20px;
     background-color: red;
-    opacity: 1;
+    opacity: 0;
+    
 }
 
-.scorePlayer2 {
+#scorePlayer2 {
     display: flex;
     justify-content: center;
     margin-top: 15px;
@@ -175,6 +179,19 @@ body {
 #null{
     opacity: 0;
 }
+#d2_4_5_6{
+    opacity: 0;
+}
+#d3_4_5_6{
+    opacity: 0;
+}
+#d1_3_5{
+    opacity: 0;
+}
+#d6{
+    opacity: 0;
+}
+
 
 /* Partie controle player */
 
@@ -188,13 +205,19 @@ body {
 
 .controlBtn {
     height: 25%;
-    cursor: pointer;
+    margin-top: 10px;
 }
 
 .btnControlGame {
     position: absolute;
     justify-content: center;
     align-items: center;
+}
+#rollDiceBtn{
+    cursor: pointer;
+}
+#holdBtn{
+    cursor: pointer;
 }
 
 .currentScore {
@@ -208,8 +231,8 @@ body {
     font-size: 0.8em;
 }
 
-.score1,
-.score2 {
+#score1,
+#score2 {
     color: white;
     font-size: 2em;
 }
