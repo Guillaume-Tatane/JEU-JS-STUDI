@@ -23,6 +23,7 @@ body {
     height: 100%;
     width: 50%;
     background-color: rgb(216, 213, 213);
+    transition: background-color 0.3s;
     z-index: -1;
 }
 
@@ -30,6 +31,7 @@ body {
     height: 100%;
     width: 50%;
     background-color: white;
+    transition: background-color 0.3s;
     z-index: -1;
 }
 
@@ -179,18 +181,16 @@ body {
 #null{
     opacity: 0;
 }
-#d2_4_5_6{
-    opacity: 0;
+#d1, 
+#d2,
+#d3,
+#d4,
+#d5,
+#d6,
+#d7 {
+    transition: opacity 0.2s;
 }
-#d3_4_5_6{
-    opacity: 0;
-}
-#d1_3_5{
-    opacity: 0;
-}
-#d6{
-    opacity: 0;
-}
+
 
 
 /* Partie controle player */
