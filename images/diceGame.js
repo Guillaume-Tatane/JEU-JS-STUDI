@@ -42,13 +42,16 @@ $(function(){
 
   $("#rollDiceBtn").click(() => {
 
-      if (player1.status == 1) {
-        rollDice(player1);
-        $("#score1").text(player1.round);
-    } else if (player2.status == 1) {
-        rollDice(player2);
-        $("#score2").text(player2.round);
-    }
+      displayDice(0);
+      setTimeout(() => {
+        if (player1.status == 1) {
+          rollDice(player1);
+          $("#score1").text(player1.round);
+      } else if (player2.status == 1) {
+          rollDice(player2);
+          $("#score2").text(player2.round);
+      }
+      }, 200);
   });
 
   // ------------------------------- BOUTON Hold -----------------------------
@@ -101,17 +104,19 @@ $(function(){
     if(player1.global >= maxScore || player2.global >= maxScore) init();
 
     let tempValue = 0;
-    displayDice(0);
+    
     do {
         tempValue = Math.floor(Math.random() * 6);
     } while (tempValue === 0);
     displayDice(tempValue);
+
     if (tempValue === 1) {
         player.round = 0;
         switchPlayer();
     } else {
         player.round += tempValue;
     }
+    
   }
 
   //----------------------- Fonction HOLD -------------------------------------------
@@ -157,7 +162,7 @@ $(function(){
     }
   }
 
-  //----------------------- Fonction Controle Score -------------------------------------
+  //----------------------- Fonction Controle Score Winner -------------------------------------
 
   function winner() {
     if (player1.status == 1) {
@@ -252,8 +257,6 @@ $(function(){
             break;
     }
   }
-
-
 
 });
 
