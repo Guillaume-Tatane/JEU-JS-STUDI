@@ -15,18 +15,17 @@
 </head>
 
 <body>
-  <ion-row>
-    <ion-col size="12">
-      <div class="btnRule">
-         <ul class="accordeon">
-            <li><a href="#">Règle du jeu :</a>
-              <ul>
-                <li>Si le dé sort un 1, le joueur en cours change.</li>
-                <li>Roll Dice: Lancer du dé.</li>
-                <li>Hold: Valide le score courant. A 100 le Joueur est Gagnant</li>
-              </ul>
-            </li> 
-          </ul>
+  <ion-row class="btnRule">
+    <ion-col size="auto">
+      <div>
+            <ion-button color="light" size="small" expand="block" id="ruleBtn">Règle du jeu</ion-button>
+              <div class="rule">
+                <ul>
+                  <li>Si le dé sort un 1, le joueur en cours change.</li>
+                  <li><b>Roll Dice:</b> Lancer du dé.</li>
+                  <li><b>Hold:</b> Valide le score courant. Le Gagnant est le premier à 100 points</li>
+                </ul>
+              </div>
       </div>
     </ion-col>
   </ion-row>
@@ -35,7 +34,7 @@
       <ion-grid>
         <!-- Ligne pour bouton new Game -->
         <ion-row class="rowHeader">
-          <div class="btnGame" id="newGame">
+          <div id="newGameBtn">
             <ion-icon class="btn" name="add-circle-outline"></ion-icon>
             <h3>NEW GAME</h3>
           </div>

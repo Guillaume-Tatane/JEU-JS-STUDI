@@ -1,9 +1,9 @@
 $(function(){
     
 
-  $(".accordeon ul ").hide();
-  $(".accordeon a").click(function(){
-    $(this).next("ul").slideToggle("slow");
+  $(".rule").hide();
+  $("#ruleBtn").click(function(){
+    $(this).next(".rule").slideToggle("slow");
   });
 
 
@@ -25,7 +25,7 @@ $(function(){
   }
   let player1  = new Player(0, 0, 1, 1);
   let player2  = new Player(0, 0, 0, 2);
-  let maxScore = 20; 
+  let maxScore = 100; 
 
   //-----------------------------------------------------------------------------
   //----------------------- LES BOUTONS -----------------------------------------
@@ -33,7 +33,7 @@ $(function(){
 
   // ---------------------------- BOUTON New GAME  ------------------------
 
-  $("#newGame").click(() => {
+  $("#newGameBtn").click(() => {
 
     init();
   });

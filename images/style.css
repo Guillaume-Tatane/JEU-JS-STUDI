@@ -1,18 +1,36 @@
 body {
     background-color: rgb(248, 164, 164);
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+
+@media (max-width: 540px){
+  body {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px){
+  body {
     font-size: 10px;
+  }
 }
 
 
 
 /* Entete du body et regle du jeu */
-.btnRule a{
-  text-decoration: none;
-  color: black;
+.rule{
+  background-color: rgb(250, 195, 195);
+  border: 2px solid;
+  border-radius: 6px;
+  padding-right: 10px;
 }
-.accordeon{
-  list-style-type: none;
+.btnRule{
+  justify-content: center;
 }
+.btnRule ion-button{
+  font-size: 14px;
+}
+
 
 
 /* Plateau de jeu */
@@ -57,17 +75,17 @@ body {
     font-size: 1.5em;
     color: red;
 }
-.btnGame h3 {
-    font-size: 1.2em;
-    font-weight: 100;
-    margin: 0;
-}
-#newGame {
+#newGameBtn {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+#newGameBtn h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0;
 }
 
 
