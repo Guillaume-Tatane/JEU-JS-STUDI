@@ -15,24 +15,27 @@
 </head>
 
 <body>
+  <!---------------------------- ROW pour bouton RULE ---------------------------->
   <ion-row class="btnRule">
     <ion-col size="auto">
       <div>
-            <ion-button color="light" size="small" expand="block" id="ruleBtn">Règle du jeu</ion-button>
-              <div class="rule">
-                <ul>
-                  <li>Si le dé sort un 1, le joueur en cours change.</li>
-                  <li><b>Roll Dice:</b> Lancer du dé.</li>
-                  <li><b>Hold:</b> Valide le score courant. Le Gagnant est le premier à 100 points</li>
-                </ul>
-              </div>
+          <ion-button color="light" size="small" expand="block" id="ruleBtn">Règle du jeu</ion-button>
+            <div class="rule">
+              <ul>
+                <li>Si le dé sort un 1, le joueur en cours change.</li>
+                <li><b>Roll Dice:</b> Lancer du dé.</li>
+                <li><b>Hold:</b> Valide le score courant. Le Gagnant est le premier à 100 points</li>
+              </ul>
+          </div>
       </div>
     </ion-col>
   </ion-row>
+
+  <!----------------------------Plateau de Jeu diviser en 4 Parties ---------------------------->
   <ion-row class="game">
     <div class="plateGame">
       <ion-grid>
-        <!-- Ligne pour bouton new Game -->
+        <!---------------------------- ROW pour bouton new Game ---------------------------->
         <ion-row class="rowHeader">
           <div id="newGameBtn">
             <ion-icon class="btn" name="add-circle-outline"></ion-icon>
@@ -43,9 +46,9 @@
           <ion-col size="6" class="bgPlayer2">
           </ion-col>
         </ion-row>
-        <!-- Ligne principale contenant le score et l'affichage du dé -->
+
+        <!---------------------------- ROW pour affichage des players, leurs scores, puce player en cours et Background des players ---------------------------->
         <ion-row class="rowPlayer">
-          <!-- ------------------------- Les players ------------------------------ -->
           <ion-col size="6" class="bgPlayer1">
             <div class="Player1">
               <h2 id="name1">PLAYER 1</h2>
@@ -65,23 +68,25 @@
             </div>
           </ion-col>
         </ion-row>
-        <!-- ------------------------- DICE ------------------------------ -->
+
+        <!---------------------------- DICE Affichage du Dé ---------------------------->
         <ion-row class="rowDice">
-          <!-- element constituant le dé -->
+          <!-- DIV element constituant le dé pour le positionnement de celui-ci-->
+          <!-- Compositon du dé de jeu: 3 lignes de 3 cols avec un element div pour le point -->
           <div class="dGame">
-            <!-- ------------------  La premiere ligne du dé--------------------   -->
+            <!----------------------------  La premiere ligne du dé  ---------------------------->
             <ion-row class="dLine">
               <ion-col size="4" class="dCol">
                 <div class="puceD" id="d1"></div>
               </ion-col>
               <ion-col size="4" class="dCol">
-                <div class="puceD" id="null"></div>
+                <div class="puceD" id="null"></div> <!-- Ne servira jamais -->
               </ion-col>
               <ion-col size="4" class="dCol">
                 <div class="puceD" id="d2"></div>
               </ion-col>
             </ion-row>
-            <!-- ------------------  La Deuxieme ligne du dé--------------------   -->
+            <!----------------------------  La Deuxieme ligne du dé  ---------------------------->
             <ion-row class="dLine">
               <ion-col size="4" class="dCol">
                 <div class="puceD" id="d3"></div>
@@ -93,26 +98,28 @@
                 <div class="puceD" id="d5"></div>
               </ion-col>
             </ion-row>
-            <!-- ------------------  La Troisieme ligne du dé--------------------   -->
+            <!----------------------------  La Troisieme ligne du dé ---------------------------->
             <ion-row class="dLine">
               <ion-col size="4" class="dCol">
                 <div class="puceD" id="d6"></div>
               </ion-col>
               <ion-col size="4" class="dCol">
-                <div class="puceD" id="null"></div>
+                <div class="puceD" id="null"></div> <!-- Ne servira jamais -->
               </ion-col>
               <ion-col size="4" class="dCol">
                 <div class="puceD" id="d7"></div>
               </ion-col>
             </ion-row>
           </div>
-          <!-- ------------------------- Background players RowDice ------------------------------ -->
+          <!----------------------------  Background players pour la Row Dice ---------------------------->
           <ion-col size="6" class="bgPlayer1">
           </ion-col>
           <ion-col size="6" class="bgPlayer2">
           </ion-col>
         </ion-row>
-        <!-- ----------------------la partie controle du Jeu ------------------------------ -->
+
+        <!----------------------------  la partie controle du Jeu, button et current score ---------------------------->
+        <!-- Compositon un element DIV avec 2 row de 1 cols pour le positionnement centrer -->
         <ion-row class="rowControlGame">
           <div class="btnControlGame">
             <ion-row class="controlBtn">
@@ -128,6 +135,7 @@
               </ion-col>
             </ion-row>
           </div>
+          <!----------------------------  Background players pour la Row Control Game avec current score  ---------------------------->
           <ion-col size="6" class="bgPlayer1 dCol">
             <div class="currentScore">
               <h4>CURRENT</h4>
@@ -149,7 +157,7 @@
     </div>
   </ion-row>
   
-
+    <!----------------------------  Les scripts Jquery et script du jeu ---------------------------->
     <script src="images/jquery-3.5.1.min.js" type="text/javascript"></script>
     <script src="images/diceGame.js" type="text/javascript"></script>
 </body>
